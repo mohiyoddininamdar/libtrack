@@ -15,7 +15,9 @@ def search_book(title):
 
 
 def calculate_fine(days_late):
-    return days_late * 5
+    if days_late <= 5:
+        return 0
+    return (days_late - 5) * 5
 
 
 def add_book(title, copies):
